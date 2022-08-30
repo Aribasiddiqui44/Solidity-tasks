@@ -1,0 +1,24 @@
+//26 AUGUST TASKS
+
+//TASK:01
+contract aug_tasks_1
+{
+    function digitSum(int n) public pure returns(int)
+    {
+        int a = ((n/10)/10);
+        int b = (n/10)%10;
+        int c = n%10;
+    
+        return (a+b+c);
+    }
+    
+}
+
+//TASK:02
+contract aug_tasks_2
+{
+    function nthterm(uint n, uint a, uint b,uint c) public pure returns(uint)
+    {
+       return(a + (n-1)*(b-a));
+    }
+}
