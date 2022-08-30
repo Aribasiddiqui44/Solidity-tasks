@@ -1,0 +1,29 @@
+//29 AUGUSTTASKS
+
+//TASK:01
+contract _aug_task_1
+{
+    function power(uint x,uint y) public pure returns(uint)
+    {
+        return(x**y);
+    }
+}
+
+//TASK:02
+contract _aug_task_2
+{
+    function palindrome(uint n) public pure returns(bool)
+    {
+        uint rem;
+        uint sum = 0;
+        uint temp= n;
+        while (n>0)
+        {
+            rem = n%10;
+            sum = (sum*10)+rem;
+            n = n/10;
+        }
+        return(temp==sum);
+        
+    }
+}
