@@ -1,0 +1,42 @@
+//TASK:01
+contract aug_tasks1
+{
+    uint private a = 1;
+
+    function set(uint _a) external
+    {
+        a = _a;
+    }
+
+    function get() public view returns(uint)
+    {
+        return a;
+    }
+}
+
+//TASK:02
+contract aug_tasks2
+{
+    function _evaluate(int a, int b) public pure returns(int)
+    {
+        return((a+b)-(a-b));
+    }
+}
+
+//TASK:03
+contract aug_tasks3
+{
+    function find(int a) public pure returns(int)
+    {
+        require(a>0);
+        return (a%3);
+    }
+}
+//TASK:04
+{
+    function average(int a,int b,int c) public pure returns(int)
+    {
+        require(a>0 && b>0 && c>0);
+        return((a+b+c)/3);
+    }
+}
