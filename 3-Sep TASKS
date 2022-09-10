@@ -26,21 +26,16 @@ contract reverse
 // SPDX-License-Identifier: Unlicensed
 pragma solidity ^0.8.15;
 
-contract reverse
+function reverseArray(uint[] memory arr , uint length) public pure returns(uint[] memory)
 {
-    function _reverse(uint n) public pure returns(uint)
+    uint[] memory revArr=new uint[](length);
+    uint j;
+    for(uint i=length;i>0; i--)
     {
-        uint rem;
-        uint rev=0;
-
-        while(n>0)
-        {
-            rem = n%10;
-            rev = (rev *10) + rem;
-            n = n/10;
-        }
-        return rev;
+        revArr[j]=arr[i-1];
+        j++;
     }
+    return(revArr);
 }
 
 
