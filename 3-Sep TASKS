@@ -38,6 +38,18 @@ function reverseArray(uint[] memory arr , uint length) public pure returns(uint[
     return(revArr);
 }
 
+// 2nd method
+function reverse1Array(uint256[] memory arr, uint256 len)
+    public pure returns (uint256[] memory)
+    {
+        uint256 temp;
+        for (uint256 i = 0; i < len / 2; i++) {
+            temp = arr[i];
+            arr[i] = arr[len - i - 1];
+            arr[len - i - 1] = temp;
+        }
+        return arr;
+    }
 
 //Arrray to Even
 
